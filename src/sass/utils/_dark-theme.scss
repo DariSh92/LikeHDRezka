@@ -1,0 +1,19 @@
+.darkTheme {
+  color: $secondary-text-color;
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9727241238292192) 5%,
+    rgba(62, 7, 24, 0.8578781854538691) 50%,
+    rgba(0, 0, 0, 0.9783263647255778) 96%
+  );
+}
+
+.darkTheme__light-text {
+  color: $secondary-text-color;
+}
+
+.darkTheme__accent-text {
+  color: $accent-color;
+}

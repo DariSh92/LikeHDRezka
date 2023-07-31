@@ -1,0 +1,222 @@
+.backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+}
+
+.active {
+  display: block;
+}
+
+.film-card {
+  width: 256px;
+  max-height: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 40px;
+  color: $primary-text-color;
+
+  @include mq(tablet) {
+    max-height: 90vh;
+    width: 680px;
+  }
+
+  @include mq(desktop) {
+    width: 782px;
+  }
+}
+
+.film-info__inner-wrapper {
+  overflow: auto;
+  max-height: 260px;
+
+  margin-bottom: 26px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.film-image {
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 20px;
+    width: 240px;
+    height: auto;
+    max-height: 357px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    width: 264px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 375px;
+  }
+  border-radius: 5px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.15em;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.film-info {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $modal-info-color;
+}
+
+.film-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+.film-modal-info {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+}
+.wrapper {
+  margin-bottom: 20px;
+}
+.about-film {
+  margin-bottom: 8px;
+}
+
+.film-about {
+  @include mq(tablet) {
+    max-width: 260px;
+  }
+}
+
+.votes {
+  margin-right: 41px;
+}
+
+.accent-vote {
+  background-color: $accent-color;
+  border-radius: 2px;
+  padding: 0 2px 0 2px;
+}
+.popularity {
+  margin-right: 53px;
+}
+.original-title {
+  margin-right: 39px;
+}
+.genre {
+  margin-right: 76px;
+}
+.watched-films-btn {
+  height: 64px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: $accent-color;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  border-color: transparent;
+  color: $bgc-primary;
+
+  min-width: 110px;
+
+  @include mq(tablet) {
+    min-width: 125.03px;
+    height: 44px;
+  }
+  @include mq(desktop) {
+    min-width: 136px;
+  }
+
+  &:hover {
+    color: $primary-text-color;
+    background-color: $bgc-primary;
+    border-color: $primary-text-color;
+  }
+}
+
+.queued-films-btn {
+  border: 1px solid $primary-text-color;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  background-color: $bgc-primary;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $primary-text-color;
+
+  min-width: 110px;
+
+  @include mq(tablet) {
+    min-width: 125.03px;
+    height: 44px;
+  }
+  @include mq(desktop) {
+    min-width: 136px;
+  }
+
+  &:hover {
+    color: $bgc-primary;
+    background-color: $accent-color;
+    border-color: transparent;
+  }
+}
+
+.buttons-wrapper {
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.film-image-wrapper {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    align-items: center;
+    margin-right: 68px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 16px;
+  }
+}
+.film-card {
+  @media screen and (min-width: 768px) and (max-width: 1198px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}

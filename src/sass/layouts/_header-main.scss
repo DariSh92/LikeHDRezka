@@ -1,0 +1,214 @@
+.header {
+  padding-top: 40px;
+  padding-bottom: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56),
+      rgba(0, 0, 0, 0.56)
+    ),
+    url('../images/im.header-main/header-main-mobile1.jpg');
+  flex-grow: 1;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/im.header-main/header-main-mobile2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/im.header-main/header-main-tablet1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url('../images/im.header-main/header-main-tablet2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/im.header-main/kino.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url('../images/im.header-main/header-main-tablet2x.jpg');
+    }
+  }
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 54px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 41px;
+  }
+}
+
+.header-title {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.17;
+    // color: #FFFFFF;
+  }
+}
+
+.header-logo__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+
+  transition: color $timing-function, 250ms;
+
+  &:hover {
+    color: $hover-color;
+  }
+  &:hover > svg {
+    stroke: $hover-color;
+  }
+}
+
+.header-logo__icon {
+  stroke: $secondary-text-color;
+  transition: stroke $timing-function, 250ms;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+.header-list__item:not(:last-child) {
+  margin-right: 39px;
+
+  @include mq(tablet-only) {
+    margin-right: 40px;
+  }
+}
+
+.header-list__link {
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  color: $secondary-text-color;
+  text-decoration: none;
+
+  transition: color $timing-function, 250ms;
+
+  &--current::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    bottom: -3px;
+    background-color: $warn-text-color;
+  }
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.header-search-form {
+  margin: 0 auto 16px auto;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
+}
+.header-search-form__buton {
+  width: 12px;
+  height: 12px;
+  border: none;
+  outline: none;
+  position: absolute;
+  padding: 0;
+  top: 2px;
+  right: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header-search-form__input {
+  width: 100%;
+  height: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: $secondary-text-color;
+  border: none;
+  border-bottom: 0.5px solid $secondary-text-color;
+  background-color: transparent;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.14;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    color: $secondary-text-color;
+  }
+}
+
+.header-info {
+  height: 16px;
+}
+
+.header-info__text {
+  font-size: 14px;
+  line-height: 1.14;
+  color: $warn-text-color;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+}
